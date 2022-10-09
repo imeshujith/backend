@@ -5,16 +5,21 @@ module.exports = (sequelize, DataTypes) => {
       id: {
         type: DataTypes.STRING,
         primaryKey: true,
+        allowNull: false,
+        unique: true,
       },
       login: {
         type: DataTypes.STRING,
         unique: true,
+        allowNull: false,
       },
       name: {
         type: DataTypes.STRING,
+        allowNull: false,
       },
       salary: {
         type: DataTypes.FLOAT,
+        allowNull: false,
       },
     },
     {

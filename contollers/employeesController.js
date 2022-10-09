@@ -7,7 +7,7 @@ const Employee = db.employees;
 const addEmployee = async (req, res, err) => {
   const employee = await Employee.bulkCreate(req.body, {
     fields: ["id", "login", "name", "salary"],
-    updateOnDuplicate: ["id", "login"],
+    updateOnDuplicate: ["login", "name", "salary"],
   });
   res.status(201).send(employee);
 };
